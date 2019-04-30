@@ -24,8 +24,9 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         return label
     }()
     
+    // ทำให้ icon ไม่ดูกลมกลืนกับ backgorundColor
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .lightContent //A light status bar, intended for use on dark backgrounds.
     }
     
     private func setupNotificationObservers() {
@@ -53,7 +54,7 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     setupNotificationObservers() // ฟังชั่นนี้ไม่มีผลต่อ program
+       setupNotificationObservers() // ทำให้เวลาออกจากแอพ แล้วเข้าใหม่จะไม่ทำให้ วงกลมที่ยืดหดได้ (pulsatingLayer) ไม่หายไป
         
         view.backgroundColor = UIColor.backgroundColor
         

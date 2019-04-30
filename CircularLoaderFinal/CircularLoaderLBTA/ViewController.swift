@@ -87,7 +87,7 @@ class ViewController: UIViewController, URLSessionDownloadDelegate {
         // เส้น download (ความจริงคือวงกลม ที่ ไม่มีสีด้านใน มีแต่สีขอบ แล้วขอบคือ เส้น download)
         shapeLayer = createCircleShapeLayer(strokeColor: .outlineStrokeColor, fillColor: .clear)
         
-//        กำหนดด้าน
+//        กำหนดด้าน และจุดเริ่มต้นของเส้น download
         shapeLayer.transform = CATransform3DMakeRotation(-CGFloat.pi / 2, 0, 0, 1)
         //        กำหนดความยาวเส้น download = 0
         shapeLayer.strokeEnd = 0
